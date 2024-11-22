@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <nav className="bg-blue-900 p-4">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <h1 className="text-white text-lg font-bold">My Website</h1>
+                <h1 className="text-white text-2xl font-bold">My Website</h1>
                 
                 {/* Burger icon for small screens */}
                 <div className="md:hidden" onClick={toggleMenu}>

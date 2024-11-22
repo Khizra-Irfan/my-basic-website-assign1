@@ -1,37 +1,35 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="bg-[#f0f8ff] min-h-screen flex flex-col justify-center items-center p-8">
-      <main className="text-center font-sans leading-relaxed max-w-lg w-full">
-        {/* Main Heading */}
-        <h1 className="text-[#2f4f4f] text-5xl font-bold mb-8">
-          ~Welcome to My Website~
-        </h1>
+      <main className="max-w-3xl w-full text-center font-sans leading-relaxed">
+        <h1 className="text-[#2f4f4f] text-5xl font-bold mb-8">~Welcome to My Website~</h1>
 
-        {/* Centered Flipped Image */}
-        <div className="group perspective-[1000px] w-96 h-96 mb-12 mx-auto">
-          <div className="relative w-full h-full transform transition-transform duration-1500 rotate-[180deg] group-hover:rotate-[0deg] shadow-xl shadow-blue-900">
-            {/* Front side of the image */}
-            <div className="absolute w-full h-full backface-hidden">
-              <img
-                src="/images/profile-picture.jpg" // Replace with your image path
-                alt="Profile"
-                className="w-full h-full object-cover rounded-lg shadow-xl"
-              />
-            </div>
+        <section className="mb-8">
+          <h3 className="text-[#4682b4] text-2xl font-semibold mb-4">What I Do</h3>
+          <p className="text-[#333] text-lg leading-7">
+            I&apos;m a web developer passionate about building creative and functional websites. I specialize in creating
+            responsive designs and interactive web applications using modern technologies like HTML, CSS, JavaScript, and Next.js.
+          </p>
+        </section>
 
-            {/* Back side of the image (text) */}
-            <div className="absolute w-full h-full bg-blue-700 text-white flex items-center justify-center rounded-lg shadow-xl p-8 rotate-[180deg] backface-hidden">
-              <p className="text-2xl font-semibold">
-                Hi, I'm a passionate web developer focused on creating impactful web experiences!
-              </p>
-            </div>
-          </div>
-        </div>
+        <section>
+          <h3 className="text-[#4682b4] text-2xl font-semibold mb-4">Contact Me</h3>
+          <p className="text-[#333] text-lg leading-7">
+            Feel free to reach out if you have any questions or if you&apos;re interested in working together. I&apos;d love
+            to hear from you!
+          </p>
+        </section>
 
-        {/* Centered Button */}
-        <button className="bg-[#4682b4] text-white py-3 px-6 rounded-lg transition duration-300 hover:bg-[#2c4f78] text-lg font-medium mt-2 mb-3">
-          Learn More
-        </button>
+        {/* Example of using next/image */}
+        <Image
+          src="/path/to/your/home-image.jpg"
+          alt="Home Page Illustration"
+          width={500}
+          height={300}
+          layout="responsive"
+        />
       </main>
     </div>
   );
